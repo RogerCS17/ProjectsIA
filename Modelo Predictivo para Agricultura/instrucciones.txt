@@ -1,0 +1,11 @@
+Cree un modelo de regresión logística multiclase para predecir categorías de "cultivos" con una puntuación F1 superior a 0,5.
+
+- Lea suelo_measures.csv como un DataFrame de pandas y realice algunas comprobaciones de datos, como determinar la cantidad de cultivos, verificar los valores faltantes y verificar que los datos en cada columna de características potenciales sean numéricos.
+
+-Divida los datos en conjuntos de entrenamiento y prueba, estableciendo test_size igual al 20% y usando un random_state de 42.
+
+-Prediga el tipo de "cultivo" utilizando cada característica individualmente recorriendo todas las características y, para cada característica, ajuste un modelo de regresión logística y calcule f1_score(). Al crear el modelo, establezca max_iter en 2000 para que el modelo pueda converger y pase un valor de cadena apropiado al argumento de la palabra clave multi_class.
+
+-Para evitar seleccionar dos características que estén altamente correlacionadas, realice un análisis de correlación para cada par de características, lo que le permitirá construir un modelo final sin la presencia de multicolinealidad.
+
+-Una vez que tenga sus características finales, entrene y pruebe un nuevo modelo de regresión logística llamado log_reg, luego evalúe el rendimiento usando f1_score(), guardando la métrica como una variable llamada model_rendimiento.
